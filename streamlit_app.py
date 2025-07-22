@@ -64,10 +64,9 @@ if submitted and model is not None:
 
     
 	if prediction[0] == 0:
-		st.success("✅ The customer is **not likely to churn**. \n\n Confidence: {100 - prob_percent}%")
+		st.success(f"✅ The customer is **not likely to churn**. \n\n Confidence: {100 - prob_percent}%")
 	else:
-		st.warning("⚠️ The customer is **likely to churn**. \n\n Churn Probability: {prob_percent}")
-		
+		st.warning(f"⚠️ The customer is **likely to churn**. \n\n Churn Probability: {prob_percent}")
 		
 	
         	
