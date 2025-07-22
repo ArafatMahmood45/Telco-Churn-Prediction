@@ -39,6 +39,7 @@ This project follows a typical machine learning pipeline:
 - Model Training (Logistic Regression, Random Forest, KNN)
 - Model Evaluation using Accuracy, Precision, Recall, F1 Score, PR AUC score and ROC AUC score.
 - Insights & Recommendations
+- Built and deployed an interactive Streamlit app using the best-performing model (Random Forest Classifier)
 
 ---
 
@@ -101,16 +102,51 @@ Key insights from the dataset:
    ```
 3. Open the notebook:
    ```bash
-   jupyter notebook churn_analysis.ipynb
+   jupyter notebook End-to-end-Churn-Prediction.ipynb
    ```
 
 ---
 
-## 🎯 Future Improvements
+## 🌐 Live Streamlit App
 
-- Automate data pipeline for real-time churn monitoring
-- Integrate with a dashboard using Streamlit or Power BI
-- Experiment with advanced models like XGBoost or LightGBM
+Experience the churn prediction model through an interactive web app built with **Streamlit**.
+
+### 🚀 Try It Out
+
+👉 [Live App Link](https://telco-churn-prediction-kik5jc9ktzcfinrj24pyfk.streamlit.app/)  
+
+---
+
+### 🧠 App Features
+
+- Get real-time churn predictions
+- See probability scores for each prediction
+- Simple and responsive UI
+
+---
+
+### 📂 Streamlit File
+
+The Streamlit app is located at:
+
+```
+├── streamlit_app.py
+```
+
+To run the app locally:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
+### 🛠️ Technologies Used
+
+- **Streamlit** – Web app framework
+- **Pandas** – Data manipulation
+- **Scikit-learn** – ML model inference
+- **Joblib** – Model serialization and loading
 
 ---
 
