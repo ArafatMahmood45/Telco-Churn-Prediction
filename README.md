@@ -117,6 +117,9 @@ Key insights from the dataset:
 ## 📬 Contact
 
 **Mahmood Arafat**  
+Aspiring AI Engineer | Machine Learning Enthusiast
+
+I'm passionate about building intelligent systems that solve real-world problems. With a background in Mechanical Engineering and hands-on experience in Python, data analysis, and model development, I'm actively transitioning into AI and machine learning—one project at a time.
 [LinkedIn](https://www.linkedin.com/in/arafat-mahmood-3b0208213/) | [Email](Mahmoodarafat08@gmail.com)
 
 ---

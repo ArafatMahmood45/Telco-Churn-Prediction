@@ -6,7 +6,7 @@ import os
 
 @st.cache_resource
 def load_model():
-    model_path = "C:/Users/HP/Desktop/Churn_Prediction_project/models/RandomForest_Churn_Model2025-07-19__0054.joblib"
+    model_path = "RandomForest_Churn_Model2025-07-19__0054.joblib"
     if not os.path.exists(model_path):
         st.error(f"Model file not found at {model_path}")
         return None
