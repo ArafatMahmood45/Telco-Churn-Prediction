@@ -1,9 +1,24 @@
 # 📊 Telco Customer Churn Prediction
 
-This project analyzes customer churn behavior using data from a telecommunications company. It includes exploratory data analysis (EDA), feature engineering, and a predictive machine learning model to identify customers likely to churn. The goal is to support proactive retention strategies.
+Predict customer churn for a telecom company using machine learning models. The project includes EDA, feature engineering, and deployment via a live Streamlit app for real-time predictions.
+
+<p align="center"> <a href="https://telco-churn-prediction-npw6k6cmkh7pf8zqbwfk3s.streamlit.app/" target="_blank"> <img src="https://img.shields.io/badge/🚀%20Launch%20App-Streamlit-green?style=for-the-badge" alt="Streamlit App Badge"> </a> </p>
+
+---
+## 🌐 Live Streamlit App
+
+👉 [Try it now](https://telco-churn-prediction-npw6k6cmkh7pf8zqbwfk3s.streamlit.app/)  
 
 ---
 
+### 🧠 App Highlights
+
+- Upload or input new customer data
+- Predict churn probability using Logistic Regression or Random Forest
+- Clean, responsive UI built with Streamlit
+- View model prediction probabilities
+
+---
 ## 🔍 Problem Statement
 
 Customer churn significantly affects the profitability of subscription-based businesses. Understanding which customers are likely to churn helps reduce revenue loss and improve customer retention. This project builds a data-driven model to predict churn from customer attributes and service usage patterns.
@@ -13,15 +28,16 @@ Customer churn significantly affects the profitability of subscription-based bus
 ## 🧰 Tools & Technologies
 
 - Python (Jupyter Notebook)
-- pandas, NumPy, matplotlib, seaborn, joblib
-- scikit-learn (Logistic Regression, Random Forest, KNN)
-- Git & GitHub for version control and documentation
+- `pandas`, `NumPy`, `matplotlib`, `seaborn`, `joblib`
+- scikit-learn: Logistic Regression, Random Forest, KNN
+- Streamlit for web app deployment
+- Git & GitHub for version control
 ---
 
 ## 📁 Dataset
 
 - **Source**: [IBM Telco Customer Churn Dataset](https://www.kaggle.com/blastchar/telco-customer-churn)
-- **Size**: ~7,000 entries
+- **Size**: ~7,000 entries, 21 features
 - **Features**:
   - Demographics (gender, age, senior citizen)
   - Services (InternetService, Contract, PaymentMethod)
@@ -43,38 +59,32 @@ This project follows a typical machine learning pipeline:
 
 ---
 
-## 🌐 Live Streamlit App
+## Models used:
 
-Experience the churn prediction model through an interactive web app built with **Streamlit**.
+- Logistic Regression
+- Random Forest
+- K-Nearest Neighbors (KNN)
 
-### 🚀 Try It Out
+### Evaluation metrics:
 
-👉 [Live App Link](https://telco-churn-prediction-npw6k6cmkh7pf8zqbwfk3s.streamlit.app/)  
-
----
-
-### 🧠 App Features
-
-- Make real-time customer churn predictions
-- View probability scores for each prediction
-- Choose between Random Forest and Logistic Regression models
-- Clean, intuitive, and responsive user interface
+- Accuracy, Precision, Recall, F1 Score, ROC AUC, PR AUC, ROC Curve, Precision-Recall Curve
 
 ---
 
-### 📂 Streamlit File
+## 📊 Model Performance
 
-The Streamlit app is located at:
+> Below is a summary of model performance based on recall and F1 score. For real-world churn prediction, recall is especially important to minimize missed churners.
 
-```
-├── streamlit_app.py
-```
+| Model               | Recall | F1 Score | Notes                                 |
+|--------------------|--------|----------|---------------------------------------|
+| Logistic Regression| 78%    | Good     | High recall, best for catching churners |
+| Random Forest      | 73%    | Best     | Balanced precision & recall             |
+| KNN                | Low    | Poor     | Underperformed                         |
 
-To run the app locally:
-
-```bash
-streamlit run streamlit_app.py
-```
+> **🔎 Note:** Threshold tuning (0.4 instead of 0.5) significantly improved recall:  
+> - Logistic Regression: **89%**  
+> - Random Forest: **86%**  
+> However, the Streamlit app currently uses the default **0.5 threshold** for simplicity and user familiarity.
 
 ---
 
@@ -84,7 +94,7 @@ Key insights from the dataset:
 
 - Customers on **month-to-month contracts** churn the most.
 - **Electronic check** users have higher churn rates.
-- **Shorter tenure** is strongly associated with churn.
+- **Short tenure** and **high monthly charges** correlate with churn
 
 ### 📈 Sample Visualizations
 
@@ -93,24 +103,6 @@ Key insights from the dataset:
 
 #### Correlation Heatmap
 ![Correlation Heatmap](images/Correlation_Map.png)
-
----
-
-## 🔍 Key Insights
-
-- **Contract Type** is the most significant churn predictor — customers on month-to-month contracts are much more likely to churn.
-- **Tenure** and **Monthly Charges** also influence churn: newer customers and those with higher bills churn more frequently.
-- Electronic check users had the highest churn rates among payment types.
-
----
-
-## 📊 Model Performance Summary
-
-- **Logistic Regression** showed the highest **recall - 78%**, making it suitable for use cases where catching all churners is vital.
-- **Random Forest** offered the best balance between precision and recall (highest F1 Score).
-- **KNN** underperformed in both precision and recall.
-
-👉 _See the notebook for full model evaluation metrics, hyperparameter tuning, and visualizations._
 
 ---
 
@@ -131,7 +123,7 @@ Key insights from the dataset:
 
 ---
 
-## ✅ How to Run
+## ✅ How to Run Locally
 
 1. Clone this repository
 2. Install dependencies:
@@ -141,6 +133,10 @@ Key insights from the dataset:
 3. Open the notebook:
    ```bash
    jupyter notebook End-to-end-Churn-Prediction.ipynb
+   ```
+4. Or launch the app:
+   ```bash
+   streamlit run streamlit_app.py
    ```
 
 ---
