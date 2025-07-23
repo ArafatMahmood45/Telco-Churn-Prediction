@@ -116,7 +116,7 @@ Experience the churn prediction model through an interactive web app built with 
 
 ### 🚀 Try It Out
 
-👉 [Live App Link](https://telco-churn-prediction-kik5jc9ktzcfinrj24pyfk.streamlit.app/)  
+👉 [Live App Link](https://telco-churn-prediction-npw6k6cmkh7pf8zqbwfk3s.streamlit.app/)  
 
 ---
 
