@@ -7,7 +7,7 @@ Predict customer churn for a telecom company using machine learning models. The 
 ---
 ## 🌐 Live Streamlit App
 
-👉 [Try it now](https://telco-churn-prediction-npw6k6cmkh7pf8zqbwfk3s.streamlit.app/)  
+👉 [Try it now](https://telco-churn-prediction-q7yq6vtgpcycymnuvkta8c.streamlit.app/)  
 
 ---
 
