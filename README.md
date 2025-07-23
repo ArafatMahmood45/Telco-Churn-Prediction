@@ -13,7 +13,7 @@ Customer churn significantly affects the profitability of subscription-based bus
 ## 🧰 Tools & Technologies
 
 - Python (Jupyter Notebook)
-- pandas, NumPy, matplotlib, seaborn
+- pandas, NumPy, matplotlib, seaborn, joblib
 - scikit-learn (Logistic Regression, Random Forest, KNN)
 - Git & GitHub for version control and documentation
 ---
@@ -39,7 +39,7 @@ This project follows a typical machine learning pipeline:
 - Model Training (Logistic Regression, Random Forest, KNN)
 - Model Evaluation using Accuracy, Precision, Recall, F1 Score, PR AUC score and ROC AUC score.
 - Insights & Recommendations
-- Built and deployed an interactive Streamlit app using the best-performing model (Random Forest Classifier)
+- Developed and deployed a Streamlit app with Random Forest and Logistic Regression models for real-time customer churn prediction.
 
 ---
 
@@ -86,10 +86,13 @@ Key insights from the dataset:
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 ├── images/
 │   └── [plots and visualizations]
-├── churn_analysis.ipynb
+├── models/
+│   ├── RandomForest_Churn_Model.joblib
+│   └── LogisticRegression_Churn_Model.joblib
+├── End-to-end-Churn-Prediction.ipynb
+├── streamlit_app.py
 ├── README.md
-└── requirements.txt
-```
+└── requirements.txt```
 
 ---
 
@@ -119,9 +122,10 @@ Experience the churn prediction model through an interactive web app built with 
 
 ### 🧠 App Features
 
-- Get real-time churn predictions
-- See probability scores for each prediction
-- Simple and responsive UI
+- Make real-time customer churn predictions
+- View probability scores for each prediction
+- Choose between Random Forest and Logistic Regression models
+- Clean, intuitive, and responsive user interface
 
 ---
 
