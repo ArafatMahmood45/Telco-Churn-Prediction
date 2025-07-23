@@ -29,20 +29,20 @@ model = models.get(model_choice)
 
 with st.form("churn_form"):
     gender = st.selectbox("Gender", ["Female", "Male"])
-    Dependents = st.selectbox("Are you a Dependent?", ["No", "Yes"])
+    Dependents = st.selectbox("Dependent", ["No", "Yes"])
     tenure = st.slider("Tenure (months)", 0, 72, 12)
     InternetService = st.selectbox("Internet Service", ["DSL", "Fiber optic", "No"])
     OnlineSecurity = st.selectbox("Online Security", ["No", "No internet service", "Yes"])
     OnlineBackup = st.selectbox("Online Backup", ["No", "No internet service", "Yes"])
     TechSupport = st.selectbox("Tech Support", ["No", "No internet service", "Yes"])
-    Contract = st.selectbox("How long is your contract?", ["Month-to-month", "One year", "Two years"])
+    Contract = st.selectbox("Contract", ["Month-to-month", "One year", "Two years"])
     PaymentMethod = st.selectbox("Payment Method", [
         "Bank Transfer - Automatic", 
         "Credit Card - Automatic", 
         "Electronic Check", 
         "Mailed Check"
     ])
-    MonthlyCharges = st.number_input("Charges per Month", min_value=0.0)
+    MonthlyCharges = st.number_input("Month Charges", min_value=0.0)
     TotalCharges = st.number_input("Total Charges", min_value=0.0)
 
     submitted = st.form_submit_button("Predict")
