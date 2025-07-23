@@ -43,73 +43,6 @@ This project follows a typical machine learning pipeline:
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
-
-Key insights from the dataset:
-
-- Customers on **month-to-month contracts** churn the most.
-- **Electronic check** users have higher churn rates.
-- **Shorter tenure** is strongly associated with churn.
-
-### 📈 Sample Visualizations
-
-#### Churn by Contract Type
-![Churn by Contract](images/Churn_Contracts.png)
-
-#### Correlation Heatmap
-![Correlation Heatmap](images/Correlation_Map.png)
-
----
-
-## 🔍 Key Insights
-
-- **Contract Type** is the most significant churn predictor — customers on month-to-month contracts are much more likely to churn.
-- **Tenure** and **Monthly Charges** also influence churn: newer customers and those with higher bills churn more frequently.
-- Electronic check users had the highest churn rates among payment types.
-
----
-
-## 📊 Model Performance Summary
-
-- **Logistic Regression** showed the highest **recall**, making it suitable for use cases where catching all churners is vital.
-- **Random Forest** offered the best balance between precision and recall (highest F1 Score).
-- **KNN** underperformed in both precision and recall.
-
-👉 _See the notebook for full model evaluation metrics, hyperparameter tuning, and visualizations._
-
----
-
-## 📁 Project Structure
-
-```
-├── data/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
-├── images/
-│   └── [plots and visualizations]
-├── models/
-│   ├── RandomForest_Churn_Model.joblib
-│   └── LogisticRegression_Churn_Model.joblib
-├── End-to-end-Churn-Prediction.ipynb
-├── streamlit_app.py
-├── README.md
-└── requirements.txt```
-
----
-
-## ✅ How to Run
-
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Open the notebook:
-   ```bash
-   jupyter notebook End-to-end-Churn-Prediction.ipynb
-   ```
-
----
-
 ## 🌐 Live Streamlit App
 
 Experience the churn prediction model through an interactive web app built with **Streamlit**.
@@ -145,12 +78,70 @@ streamlit run streamlit_app.py
 
 ---
 
-### 🛠️ Technologies Used
+## 📊 Exploratory Data Analysis (EDA)
 
-- **Streamlit** – Web app framework
-- **Pandas** – Data manipulation
-- **Scikit-learn** – ML model inference
-- **Joblib** – Model serialization and loading
+Key insights from the dataset:
+
+- Customers on **month-to-month contracts** churn the most.
+- **Electronic check** users have higher churn rates.
+- **Shorter tenure** is strongly associated with churn.
+
+### 📈 Sample Visualizations
+
+#### Churn by Contract Type
+![Churn by Contract](images/Churn_Contracts.png)
+
+#### Correlation Heatmap
+![Correlation Heatmap](images/Correlation_Map.png)
+
+---
+
+## 🔍 Key Insights
+
+- **Contract Type** is the most significant churn predictor — customers on month-to-month contracts are much more likely to churn.
+- **Tenure** and **Monthly Charges** also influence churn: newer customers and those with higher bills churn more frequently.
+- Electronic check users had the highest churn rates among payment types.
+
+---
+
+## 📊 Model Performance Summary
+
+- **Logistic Regression** showed the highest **recall - 78%**, making it suitable for use cases where catching all churners is vital.
+- **Random Forest** offered the best balance between precision and recall (highest F1 Score).
+- **KNN** underperformed in both precision and recall.
+
+👉 _See the notebook for full model evaluation metrics, hyperparameter tuning, and visualizations._
+
+---
+
+## 📁 Project Structure
+
+```
+├── data/
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── images/
+│   └── [plots and visualizations]
+├── models/
+│   ├── RandomForest_Churn_Model.joblib
+│   └── LogisticRegression_Churn_Model.joblib
+├── End-to-end-Churn-Prediction.ipynb
+├── streamlit_app.py
+├── README.md
+└── requirements.txt```
+
+---
+
+## ✅ How to Run
+
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Open the notebook:
+   ```bash
+   jupyter notebook End-to-end-Churn-Prediction.ipynb
+   ```
 
 ---
 
