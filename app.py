@@ -4,11 +4,12 @@ import numpy as np
 import joblib
 import os
 
+# Load models only once
 @st.cache_resource
 def load_model():
     model_path = {
-        "Random Forest Classifier": "RandomForest_Churn_Model2025-07-19__0054.joblib",
-        "Logistic Regression": "LogisticRegression_Churn_Model_2025-07-23__1432.joblib"
+        "Random Forest Classifier": "RandomForest_Churn_Model_2025-07-24__2100.joblib",
+        "Logistic Regression": "LogisticRegression_Churn_Model_2025-07-24__2100.joblib"
     }
     models = {}
     for model_name, model in model_path.items():
@@ -21,11 +22,17 @@ def load_model():
 
 models = load_model()
 
+# App UI
 st.title("Customer Churn Prediction App")
-st.markdown("Enter key customer details below to predict churn possibility")
+st.markdown("📊 Enter customer details to predict the likelihood of churn.")
 
 model_choice = st.selectbox("Choose a Prediction Model", list(models.keys()))
 model = models.get(model_choice)
+
+# If model is not available, stop the app
+if model is None:
+    st.error("Selected model is not available.")
+    st.stop()
 
 with st.form("churn_form"):
     gender = st.selectbox("Gender", ["Female", "Male"])
@@ -42,12 +49,12 @@ with st.form("churn_form"):
         "Electronic Check", 
         "Mailed Check"
     ])
-    MonthlyCharges = st.number_input("Month Charges", min_value=0.0)
-    TotalCharges = st.number_input("Total Charges", min_value=0.0)
+    MonthlyCharges = st.number_input("Monthly Charges", min_value=0.0, value=70.0)
+    TotalCharges = st.number_input("Total Charges", min_value=0.0, value=1500.0)
 
     submitted = st.form_submit_button("Predict")
 
-if submitted and model is not None:
+if submitted:
     input_data = pd.DataFrame([{
         "customerID": 534,
         "gender": {"Female": 0, "Male": 1}[gender],
@@ -75,6 +82,16 @@ if submitted and model is not None:
         "MonthlyCharges": MonthlyCharges,
         "TotalCharges": TotalCharges
     }])
+
+    # Optional: Check for missing model features
+    try:
+        required_features = model.feature_names_in_
+        missing_cols = set(required_features) - set(input_data.columns)
+        if missing_cols:
+            st.error(f"Missing input columns: {missing_cols}")
+            st.stop()
+    except AttributeError:
+        pass  # For older models that don't have `feature_names_in_`
 
     prediction = model.predict(input_data)
     probability = model.predict_proba(input_data)[0][1]
