@@ -8,8 +8,8 @@ import os
 @st.cache_resource
 def load_model():
     model_path = {
-        "Random Forest Classifier": "RandomForest_Churn_Model_2025-07-24__2100.joblib",
-        "Logistic Regression": "LogisticRegression_Churn_Model_2025-07-24__2100.joblib"
+        "Random Forest Classifier": "RandomForest_Churn_Model_2025-07-24__2151.joblib",
+        "Logistic Regression": "LogisticRegression_Churn_Model_2025-07-24__2151.joblib"
     }
     models = {}
     for model_name, model in model_path.items():
