@@ -1,3 +1,13 @@
+---
+title: My Streamlit App    # Replace with your app's title
+emoji: 🤖                   # Optional emoji
+colorFrom: blue            # Optional UI theme colors
+colorTo: green
+sdk: streamlit
+sdk_version: 1.25.0        # Or another supported version
+app_file: app.py
+---
+
 # 📊 Telco Customer Churn Prediction
 
 Predict customer churn for a telecom company using machine learning models. The project includes EDA, feature engineering, and deployment via a live Streamlit app for real-time predictions.
