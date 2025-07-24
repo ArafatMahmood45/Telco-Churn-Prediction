@@ -15,9 +15,10 @@ Predict customer churn for a telecom company using machine learning models. The 
 <p align="center"> <a href="https://telco-churn-prediction-npw6k6cmkh7pf8zqbwfk3s.streamlit.app/" target="_blank"> <img src="https://img.shields.io/badge/🚀%20Launch%20App-Streamlit-green?style=for-the-badge" alt="Streamlit App Badge"> </a> </p>
 
 ---
-## 🌐 Live Streamlit App
+## 🌐 Live App
 
-👉 [Try it now](https://telco-churn-prediction-q7yq6vtgpcycymnuvkta8c.streamlit.app/)  
+👉 [Churn Prediction App on Hugging Face](https://huggingface.co/spaces/arafatMahmood/Churn_Prediction_App)
+  
 
 ---
 
@@ -37,11 +38,12 @@ Customer churn significantly affects the profitability of subscription-based bus
 
 ## 🧰 Tools & Technologies
 
-- Python (Jupyter Notebook)
-- `pandas`, `NumPy`, `matplotlib`, `seaborn`, `joblib`
-- scikit-learn: Logistic Regression, Random Forest, KNN
-- Streamlit for web app deployment
-- Git & GitHub for version control
+- **Python** (Jupyter Notebook for development)
+- **Data Analysis & Visualization**: `pandas`, `NumPy`, `matplotlib`, `seaborn`
+- **Machine Learning**: `scikit-learn` (Logistic Regression, Random Forest, K-Nearest Neighbors), `joblib` for model serialization
+- **Web App Framework**: Streamlit
+- **Deployment**: Gradio on Hugging Face Spaces
+- **Version Control**: Git & GitHub
 ---
 
 ## 📁 Dataset
@@ -65,7 +67,7 @@ This project follows a typical machine learning pipeline:
 - Model Training (Logistic Regression, Random Forest, KNN)
 - Model Evaluation using Accuracy, Precision, Recall, F1 Score, PR AUC score and ROC AUC score.
 - Insights & Recommendations
-- Developed and deployed a Streamlit app with Random Forest and Logistic Regression models for real-time customer churn prediction.
+- Built an interactive Streamlit interface and deployed it using **Gradio on Hugging Face Spaces** for real-time churn prediction.
 
 ---
 
