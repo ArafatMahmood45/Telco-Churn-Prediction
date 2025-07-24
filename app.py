@@ -49,8 +49,8 @@ with st.form("churn_form"):
         "Electronic Check", 
         "Mailed Check"
     ])
-    MonthlyCharges = st.number_input("Monthly Charges", min_value=0.0, value=70.0)
-    TotalCharges = st.number_input("Total Charges", min_value=0.0, value=1500.0)
+    MonthlyCharges = st.number_input("Monthly Charges", min_value=0.0, value=0.00)
+    TotalCharges = st.number_input("Total Charges", min_value=0.0, value=0.00)
 
     submitted = st.form_submit_button("Predict")
 
